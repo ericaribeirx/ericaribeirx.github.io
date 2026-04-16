@@ -1,3 +1,17 @@
+const texto = "Meu Portfólio";
+let index = 0;
+
+function escrever() {
+  if (index < texto.length) {
+    document.getElementById("texto").textContent += texto.charAt(index);
+    index++;
+    setTimeout(escrever, 80);
+  }
+}
+
+escrever();
+
+
 const formulario = document.querySelector('#meu-formulario');
 
 function validarFormulario(event) {
@@ -23,12 +37,6 @@ const meusProjetos = [
       descricao: "Meu portfólio de apresentação feito com HTML, CSS e JavaScript.",
       link: "https://github.com/ericaribeirx",
    },
-
-    {
-      titulo: "Projeto 01",
-      descricao: "Descrição",
-      link: "https://github.com/ericaribeirx",
-   }
 ];
 
 function renderizarProjetos() {
